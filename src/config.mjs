@@ -2,11 +2,11 @@ export default {
   development: {
     type: 'development',
     port: 3000,
-    mongodb: 'mongodb+srv://12345:12345@demo.v4muu5b.mongodb.net/ecole'
+    mongodb: 'mongodb+srv://ahanane191:80yAe3XGuG8CV7J2@cluster0.l7vhd.mongodb.net/api'
   },
   production: {
     type: 'production',
     port: 3000,
-    mongodb: 'mongodb+srv://12345:12345@demo.v4muu5b.mongodb.net/ecole'
+    mongodb: 'mongodb+srv://ahanane191:80yAe3XGuG8CV7J2@cluster0.l7vhd.mongodb.net/api'
   }
 };
