@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 
-const Schema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
   firstname: String,
   lastname: String,
   avatar: String,
@@ -12,13 +14,11 @@ const Schema = new mongoose.Schema({
   versionKey: false
 }).set('toJSON', {
   transform: (doc, ret) => {
-    const retUpdated = ret;
+    const retUpdated = { ...ret };
     retUpdated.id = ret._id;
-
     delete retUpdated._id;
-
     return retUpdated;
   }
 });
 
-export default Schema;
+export default userSchema;
